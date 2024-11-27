@@ -1,0 +1,11 @@
+.back{
+    color: #0000ff;
+    font-size: 2.5rem;
+    display: inline;
+}
+
+.back:hover{
+    cursor: pointer;
+    color: #4040fd;
+    
+}
