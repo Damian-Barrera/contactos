@@ -1,16 +1,14 @@
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase/firebaseConfig'
 import { useEffect, useState } from 'react'
-// import Crear from './Crear';
 import { Link } from 'react-router-dom';
-// import Editar from './Editar';
-// import Crear from './Crear';
+
 // Para trabajar con Sweeat Alert2
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 const MySwal = withReactContent(Swal)
 
-const Home = () => {
+const Home = () => {    
 
     const [contactos, setContactos] = useState([]);
 
@@ -19,6 +17,7 @@ const Home = () => {
     const obtenerContactos = async () => {
 
         const datos = await getDocs(contacts)
+        
         setContactos(
             datos.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
 
